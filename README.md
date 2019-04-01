@@ -55,4 +55,4 @@ If you would like to use kalemail as an intermediary, without interfering with d
 ```
 FORWARD={"host":"yout.smtpserver.com", "port":<PORTNUM>, "secure":<true/false>}
 ```
-This will forward the raw email to that server, and store a copy in kalemail
+This will forward the raw email to that server, and store a copy in kalemail.
