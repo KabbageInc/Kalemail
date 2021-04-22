@@ -7,6 +7,7 @@ RUN apk add --update \
 nodejs \
 nodejs-npm \
 && rm -rf /var/cache/apk/* \
+&& npm config set unsafe-perm true \
 && npm install -g npm@5.4.2 pm2@2.10.4 \
 && npm it \
 && npm run build \
