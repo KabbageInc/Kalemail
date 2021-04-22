@@ -14,7 +14,7 @@ module.exports = (APP_CONFIG: AppConfig) => {
     });
 
     router.get('/:emailId', (req, res) => {
-        mail.getMail(req.params['emailId'])
+        mail.getMail(Number(req.params['emailId']))
         .subscribe(
             results => res.send(results),
             err => {
@@ -27,7 +27,7 @@ module.exports = (APP_CONFIG: AppConfig) => {
     });
 
     router.get('/:emailId/contents', (req, res) => {
-        mail.getMail(req.params['emailId'])
+        mail.getMail(Number(req.params['emailId']))
         .subscribe(
             result => res.send(result.html),
             err => {
