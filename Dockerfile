@@ -1,4 +1,4 @@
-FROM gliderlabs/alpine:3.6
+FROM alpine:3.6
 
 WORKDIR /build
 COPY . /build
@@ -7,7 +7,8 @@ RUN apk add --update \
 nodejs \
 nodejs-npm \
 && rm -rf /var/cache/apk/* \
-&& npm install -g npm@5.4.2 pm2 \
+&& npm config set unsafe-perm true \
+&& npm install -g npm@5.4.2 pm2@2.10.4 \
 && npm it \
 && npm run build \
 && mkdir -p -m 0777 /app/bin \

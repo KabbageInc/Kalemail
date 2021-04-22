@@ -29,7 +29,7 @@ module.exports = (APP_CONFIG: AppConfig) => {
         if (mailId in testCache && testCache[mailId].exp > now) {
             return res.header('Content-Type', 'text/plain').send(testCache[mailId].value);
         }
-        mail.getMail(mailId)
+        mail.getMail(Number(mailId))
         .flatMap(email => eoa.createTest(email))
         .flatMap(
             testId => db.query('Update `emails` SET `LastTestId`=? Where `EmailId`=?', [testId, mailId])
