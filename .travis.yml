@@ -11,6 +11,6 @@ branches:
 install: true
 script:
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
-  - docker build -t kabbageinc/kalemail:latest .
-after_success: docker push kabbageinc/kalemail:latest
-after_script: docker rmi -f kabbageinc/kalemail:latest
+  - docker build -t kabbageinc/kalemail:1.1 .
+after_success: docker push kabbageinc/kalemail:1.1
+after_script: docker rmi -f kabbageinc/kalemail:1.1
