@@ -7,7 +7,6 @@ services:
 branches:
   only:
   - master
-  - f/updates
 
 install: true
 script:
