@@ -40,7 +40,7 @@
     "@angular/platform-browser-dynamic": "5.2.4",
     "@angular/platform-server": "5.2.4",
     "@angular/router": "5.2.4",
-    "aws-sdk": "2.193.0",
+    "aws-sdk": "2.521.0",
     "body-parser": "1.18.2",
     "bootstrap": "4.0.0",
     "core-js": "2.5.3",
